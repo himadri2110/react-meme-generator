@@ -42,7 +42,7 @@ class MemeGenerator extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="meme-gen">
         {/* Take inputs */}
         <form onSubmit={this.submitHandler}>
           <input

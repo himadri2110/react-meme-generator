@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab&family=Montserrat:wght@800");
+
+:root {
+  --primary-color: rgb(20, 20, 145);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Zilla Slab", serif;
+}
+
+body {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--primary-color);
+}
+
+header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.meme-gen,
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+button {
+  margin: 0.25rem;
+  font-size: 1.1rem;
+  border-radius: 0.25rem;
+}
+
+input {
+  border: 1px solid var(--primary-color);
+  padding: 0.15rem 0.25rem;
+  outline: none;
+}
+
+input:focus {
+  border-width: 2px;
+}
+
+button {
+  padding: 0.5rem;
+  color: white;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border: none;
+}
+
+.meme {
+  position: relative;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.meme > img {
+  width: 100%;
+}
+
+.meme > h2 {
+  position: absolute;
+  margin: 1rem 0;
+  font-size: 5.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.35vw;
+  -webkit-text-stroke-color: black;
+  text-transform: uppercase;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.meme > .top-text {
+  top: 0;
+}
+
+.meme > .bottom-text {
+  bottom: 0;
+}
