@@ -20,7 +20,6 @@ class MemeGenerator extends React.Component {
       .then((response) => response.json())
       .then((response) => {
         this.setState({ allMemeImgs: response.data.memes });
-        console.log(this.state.allMemeImgs);
       });
   }
 
@@ -62,6 +61,9 @@ class MemeGenerator extends React.Component {
 
         <div className="meme">
           <img src={this.state.randomImg} alt="Meme" />
+
+          <h2 className="top-text">{this.state.topText}</h2>
+          <h2 className="bottom-text">{this.state.bottomText}</h2>
         </div>
       </div>
     );
