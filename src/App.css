@@ -11,11 +11,13 @@
   font-family: "Zilla Slab", serif;
 }
 
-body {
-  margin: 1rem;
+.App {
+  margin: 0 1rem;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   color: var(--primary-color);
 }
 
@@ -24,6 +26,10 @@ header {
   font-weight: bold;
   margin: 0.5rem;
   text-align: center;
+}
+
+.meme-gen {
+  flex-grow: 1;
 }
 
 .meme-gen,
@@ -71,13 +77,14 @@ button {
 .meme > h2 {
   position: absolute;
   margin: 1rem 0;
-  font-size: 5.5vw;
+  /* font-size: 200%; */
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  color: white;
+  text-shadow: 5px 5px 10px black;
+  /* -webkit-text-fill-color: white; Will override color (regardless of order)
   -webkit-text-stroke-width: 0.35vw;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: black; */
   text-transform: uppercase;
   left: 50%;
   transform: translateX(-50%);
@@ -89,4 +96,10 @@ button {
 
 .meme > .bottom-text {
   bottom: 0;
+}
+
+footer {
+  font-size: 1.25rem;
+  height: 3rem;
+  line-height: 3rem;
 }
