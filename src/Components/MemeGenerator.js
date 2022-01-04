@@ -1,6 +1,7 @@
 import React from "react";
 
 class MemeGenerator extends React.Component {
+  // Set initial states and bind the methods
   constructor() {
     super();
 
@@ -15,6 +16,7 @@ class MemeGenerator extends React.Component {
     this.submitHandler = this.submitHandler.bind(this);
   }
 
+  // Call API and update the state when the MemeGenerator component Mounts
   componentDidMount() {
     fetch("https://api.imgflip.com/get_memes")
       .then((response) => response.json())
@@ -23,11 +25,13 @@ class MemeGenerator extends React.Component {
       });
   }
 
+  // Set the states 'topText' & 'bottomText' on change of inputs
   changeHandler(event) {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   }
 
+  // On form submit, select a random image from the array and update the state of 'randImg'
   submitHandler(event) {
     event.preventDefault();
 
@@ -39,6 +43,7 @@ class MemeGenerator extends React.Component {
   render() {
     return (
       <div>
+        {/* Take inputs */}
         <form onSubmit={this.submitHandler}>
           <input
             type="text"
@@ -59,6 +64,7 @@ class MemeGenerator extends React.Component {
           <button>Generate Meme</button>
         </form>
 
+        {/* Display the meme */}
         <div className="meme">
           <img src={this.state.randomImg} alt="Meme" />
 
