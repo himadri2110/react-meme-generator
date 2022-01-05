@@ -72,6 +72,7 @@ button {
 
 .meme > img {
   width: 100%;
+  box-shadow: 2px 2px 10px 2px rgb(202, 202, 202);
 }
 
 .meme > h2 {
@@ -82,9 +83,7 @@ button {
   font-weight: 800;
   color: white;
   text-shadow: 5px 5px 10px black;
-  /* -webkit-text-fill-color: white; Will override color (regardless of order)
-  -webkit-text-stroke-width: 0.35vw;
-  -webkit-text-stroke-color: black; */
+  text-align: center;
   text-transform: uppercase;
   left: 50%;
   transform: translateX(-50%);
